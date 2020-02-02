@@ -1,4 +1,8 @@
 # p01-simple-led
+
+# Copyright 2020 Matthew B. Jones
+# License: Apache-2.0
+
 # Uses one LED on GPIO 18
 
 import RPi.GPIO as GPIO
