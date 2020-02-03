@@ -12,7 +12,7 @@ import sys
 def main():
     setup()
     for i in range(1, 10):
-        blink(0.5)
+        blink(0.25)
 
 def setup():
     GPIO.setmode(GPIO.BCM)
