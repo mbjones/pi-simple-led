@@ -21,7 +21,7 @@ def main():
         # /vessels/<RegExp>/environment/inside/[A-Za-z0-9]+/temperature
         # electrical.alternators.1.temperature.warnUpper
 
-        time.sleep(1)
+        time.sleep(5)
 
 def sk_send(sock, path, value):
    sk_delta_msg='{"updates": [{"$source": "lituyamon","values":[ {"path":"'+ path +'","value":"'+ str(value) + '"}]}]}\n'
