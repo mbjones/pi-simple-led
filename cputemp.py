@@ -10,17 +10,8 @@ def main():
 
     while True:
         temp_c = cpu.temperature
-        temp_f = round(temp_c * (9.0 / 5.0) + 32.0, 2)
         temp_k = round(temp_c + 273.15, 1)
-        # print('CPU Temperature: {}F'.format(temp_f))
         sk_send(sock, "environment.inside.lituyamon.temperature", temp_k)
-
-        # propulsion.1.temperature
-        # environment.inside.engineRoom.temperature
-        # environment.outside.temperature
-        # /vessels/<RegExp>/environment/inside/[A-Za-z0-9]+/temperature
-        # electrical.alternators.1.temperature.warnUpper
-
         time.sleep(5)
 
 def sk_send(sock, path, value):
