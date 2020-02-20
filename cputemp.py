@@ -24,7 +24,7 @@ def main():
         time.sleep(5)
 
 def sk_send(sock, path, value):
-   sk_delta_msg='{"updates": [{"$source": "lituyamon","values":[ {"path":"'+ path +'","value":"'+ str(value) + '"}]}]}\n'
+   sk_delta_msg='{"updates": [{"$source": "lituyamon","values":[ {"path":"'+ path +'","value":'+ str(value) + '}]}]}\n'
    print(sk_delta_msg.encode())
    sock.sendto(sk_delta_msg.encode(), ('127.0.0.1', 55557))
 
